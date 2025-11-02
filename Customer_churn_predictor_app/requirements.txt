@@ -1,0 +1,7 @@
+pandas
+joblib
+flask
+flask-cors
+scikit-learn
+Jinja2
+# gunicorn     # -- only for professional deployment

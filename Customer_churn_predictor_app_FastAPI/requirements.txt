@@ -1,0 +1,8 @@
+pandas
+joblib
+fastapi
+uvicorn
+pydantic
+scikit-learn
+Jinja2
+# gunicorn     # -- only for professional deployment

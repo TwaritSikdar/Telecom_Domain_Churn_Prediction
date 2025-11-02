@@ -1,0 +1,21 @@
+# Some jupyter notebook files
+Telecom_Domain_Project_New.ipynb
+Telecom_Domain_Project_New._using_SMOTE_ENN.ipynb
+Telecom_Domain_Project_New._using_ADASYN.ipynb
+Telecom_Domain_Project_New_using_CV.ipynb
+
+# Folders
+images
+.ipynb_checkpoints/
+
+# Some python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment folders (if present)
+env/
+venv/
+ENV/
+.venv/

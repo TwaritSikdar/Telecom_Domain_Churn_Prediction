@@ -1,0 +1,18 @@
+python
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+imblearn
+lightgbm
+xgboost
+scikit-optimize
+joblib
+Jinja2
+flask
+fastapi
+uvicorn
+pydantic
+flask-cors
+# gunicorn     # -- only for professional deployment

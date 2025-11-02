@@ -1,0 +1,302 @@
+/* --- Font Imports (Local WOFF2 Files) --- */
+        
+/* Share Tech */
+@font-face {
+    font-family: 'Share Tech';
+    /* PATH CORRECTION: Added leading '/' for root-relative path */
+    src: url('fonts/ShareTech-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Dosis (Variable) */
+@font-face {
+    font-family: 'Dosis';
+    /* PATH CORRECTION: Added leading '/' for root-relative path */
+    src: url('fonts/Dosis-VariableFont_wght.woff2') format('woff2');
+    font-weight: 200 800;
+    font-style: normal;
+}
+/* Open Sans (Variable) */
+@font-face {
+    font-family: 'Open Sans';
+    /* PATH CORRECTION: Added leading '/' for root-relative path */
+    src: url('fonts/OpenSans-VariableFont_wdth\,wght.woff2') format('woff2'); 
+    font-weight: 300 800;
+    font-style: normal;
+}
+/* Jost (Variable) */
+@font-face {
+    font-family: 'Jost';
+    /* PATH CORRECTION: Added leading '/' for root-relative path */
+    src: url('fonts/Jost-VariableFont_wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* Variables and Resets */
+:root {
+    --primary-indigo: #4F46E5;
+    --secondary-gray: #F9FAFB;
+    --text-dark: #1F2937;
+    --border-color: #D1D5DB;
+    --rule-color: #6B7280; /* Bolder rule color */
+}
+body {
+    font-family: 'Inter', sans-serif; /* Default Fallback Font */
+    background-color: var(--secondary-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- FONT APPLICATION (Open Sans) --- */
+/* Apply Open Sans to Main Header, Card Title, and Section Titles */
+.header-content h1, .card h2, .section-card h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* --- FONT APPLICATION (Jost) --- */
+/* Apply Jost to Subtitle, Footer, Note, and Prediction Section */
+.header-content p, 
+.result-text-area, /* Custom class for result/prediction text */
+.note-disclaimer p, /* Custom class for note/disclaimer text */
+footer > div {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+}
+#result-container h3, #result-container p {
+    font-family: 'Jost', sans-serif;
+}
+
+/* --- FONT APPLICATION (Dosis) --- */
+/* Apply Dosis to Form Labels and Inputs */
+.input-field-group label,
+.input-field, select {
+    font-family: 'Dosis', sans-serif;
+}
+
+/* --- FONT APPLICATION (Share Tech) --- */
+/* Apply Share Tech to the Button */
+.submit-button {
+    font-family: 'Share Tech', monospace;
+    letter-spacing: 0.05em;
+    /* Button Text Bolder */
+    font-weight: 700; 
+}
+
+/* Layout Structure */
+header {
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 1rem 0;
+}
+.header-content, .main-content, footer > div {
+    max-width: 1280px; /* Equivalent to max-w-7xl */
+    margin: 0 auto;
+    padding: 0 1rem;
+    /* Center Header Content */
+    text-align: center;
+}
+main {
+    flex-grow: 1;
+    padding: 1rem;
+}
+footer {
+    background-color: white;
+    border-top: 1px solid #E5E7EB;
+    margin-top: auto;
+    text-align: center;
+}
+footer > div {
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+/* Card and Typography */
+.card {
+    background-color: white;
+    padding: 2.5rem; /* Equivalent to p-10 */
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    /* BOLDER HORIZONTAL RULE: Increased border width and used rule-color */
+    border-bottom: 2px solid var(--rule-color);
+    padding-bottom: 0.75rem;
+    text-align: left; /* Keep card title left-aligned */
+}
+.section-card {
+    background-color: var(--secondary-gray);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #E5E7EB;
+}
+.section-card h3 {
+    font-size: 1.125rem;
+    /* Bolder Section Headings */
+    font-weight: 800; 
+    color: var(--primary-indigo);
+    margin-bottom: 1rem;
+}
+.space-y-4 > * + * { margin-top: 1rem; }
+
+/* Form Inputs */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.input-field-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600; /* Dosis looks good slightly bolder */
+    color: #374151;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+.input-field, select {
+    padding: 0.65rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box; 
+}
+.input-field:focus, select:focus {
+    border-color: var(--primary-indigo);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Financial Inputs */
+.financial-inputs {
+    /* BOLDER HORIZONTAL RULE: Increased border width and used rule-color */
+    border-top: 2px solid var(--rule-color);
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    font-size: 1.125rem;
+    color: white;
+    background-color: var(--primary-indigo);
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+.submit-button:hover {
+    background-color: #4338CA;
+}
+.submit-button:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--primary-indigo);
+}
+.submit-button:disabled {
+    background-color: #9CA3AF;
+    cursor: not-allowed;
+}
+
+/* Result and Error Areas */
+#result-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease-in-out;
+}
+#result-container h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+#error-message {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    color: #B91C1C;
+    border-radius: 0.5rem;
+}
+#error-message p { margin-top: 0.25rem; }
+#error-message .font-bold { font-weight: 700; }
+
+/* Loading Spinner */
+.loading-spinner-wrapper {
+    text-align: center;
+    padding: 1rem;
+}
+.spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 4px solid var(--primary-indigo);
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+.spinner-text {
+    color: var(--primary-indigo);
+    margin-top: 0.5rem;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Utility Class (Hidden) */
+.hidden { display: none !important; }
+
+/* === RESPONSIVENESS OPTIMIZED FOR LAPTOPS/TABLETS (768px+) === */
+
+@media (min-width: 768px) { /* Medium screens (Tablets, small laptops) */
+    main {
+        padding: 2rem;
+    }
+    .main-content {
+        max-width: 1000px; /* Make container wider earlier */
+    }
+    /* Two columns for the main form groups (sections 1, 2, 3) to use horizontal space */
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Make the third section span both columns for a cleaner flow below the first two */
+    .form-grid > .section-card:nth-child(3) {
+        grid-column: span 2 / span 2;
+    }
+    .financial-inputs {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1280px) { /* Large screens (Desktop) */
+    .main-content {
+        max-width: 1280px; /* Use full max width */
+    }
+    /* Three columns for the main form groups on larger screens */
+    .form-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Reset column span for the third card */
+    .form-grid > .section-card:nth-child(3) {
+        grid-column: span 1 / span 1;
+    }
+}
