@@ -25,10 +25,7 @@ You must have **Python 3.8+** installed. All necessary Python dependencies are l
 ## 4. Project Structure
 ```
 ├── Telecom_Domain_Project_New_using_Bay_Optimisation.ipynb
-├── Telecom_Domain_Project_New_using_CV.ipynb
-├── Telecom_Domain_Project_New_using_ADASYN.ipynb
-├── Telecom_Domain_Project_New_using_SMOTE_ENN.ipynb
-├── Telecom_Domain_Project_New.ipynb
+├── Telecom_Domain_Project.ipynb
 ├── Telcom Data.csv
 ├── Customer_churn_predictor_app/
 │    ├── Resources/
