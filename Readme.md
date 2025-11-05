@@ -42,7 +42,7 @@ You must have **Python 3.8+** installed. All necessary Python dependencies are l
 │    │    │    └── ShareTech-Regular.woff2
 │    │    └── style.css
 │    ├── templates/
-│    │   └── index.html
+│    │    └── index.html
 │    ├── App.py
 │    └── requirements.txt
 ├── Customer_churn_predictor_app_FastAPI/
@@ -60,7 +60,7 @@ You must have **Python 3.8+** installed. All necessary Python dependencies are l
 │    │    │    └── ShareTech-Regular.woff2
 │    │    └── style.css
 │    ├── templates/
-│    │     └── index.html
+│    │    └── index.html
 │    ├── app.py
 │    ├── requirements.txt  
 │    └── schema.py
@@ -77,21 +77,17 @@ FastAPI is used for high-performance, asynchronous API serving. This scenario us
 1. **Install Dependencies:** 
     ```
         pip install -r requirements.txt
-
     ```
 
 2. **Run Development Server (Uvicorn):** 
 Use this command during local development as it includes automatic reloading on code changes:
     ```
         uvicorn app:churn_predictor_app --reload
-
-
     ```
 
 3. **Run Production server (Gunicorn + Uvicorn):** For real deployment, use Gunicorn as a process manager with Uvicorn workers:
     ```
         gunicorn -w 4 -k uviocrn.workers.UvicornWorker app:churn_predictor_app
-
     ```
 
 ### B. Flask
@@ -100,17 +96,14 @@ Flask is used for simpler, synchronous WSGI applications. This scenario assumes 
 1. **Install Dependencies:** 
     ```
         pip install -r requirements.txt
-   
     ```
 
 2. **Run Development Server:** Use this command during local development as it includes automatic reloading on code changes:
     ```
         python App.py
-
     ```
 
 3. **Run Production server (Gunicorn):** For real deployment, use Gunicorn with the Flask application object:
     ```
         gunicorn --bind 0.0.0.0:8000 App:app
-
     ```
