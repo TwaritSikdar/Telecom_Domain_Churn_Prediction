@@ -45,25 +45,25 @@ You must have **Python 3.8+** installed. All necessary Python dependencies are l
 │    │   └── index.html
 │    ├── App.py
 │    └── requirements.txt
-└── Customer_churn_predictor_app_FastAPI/
-     ├── Resources/
-     │    ├── Columns_to_encode.json
-     │    ├── Customer_Churn_Telecom_Domain.pkl
-     │    ├── Feature_names.json
-     │    ├── One_Hot_Encoder.pkl
-     │    └── Standard_Scaler.pkl
-     ├── static/
-     │    ├── fonts/
-     │    │    ├── Dosis-VariableFont_wght.woff2
-     │    │    ├── Jost-VariableFont_wght.woff2
-     │    │    ├── OpenSans-VariableFont_wdth,wgth.woff2
-     │    │    └── ShareTech-Regular.woff2
-     │    └── style.css
-     ├── templates/
-     │     └── index.html
-     ├── app.py
-     ├── requirements.txt  
-     └── schema.py
+├── Customer_churn_predictor_app_FastAPI/
+│    ├── Resources/
+│    │    ├── Columns_to_encode.json
+│    │    ├── Customer_Churn_Telecom_Domain.pkl
+│    │    ├── Feature_names.json
+│    │    ├── One_Hot_Encoder.pkl
+│    │    └── Standard_Scaler.pkl
+│    ├── static/
+│    │    ├── fonts/
+│    │    │    ├── Dosis-VariableFont_wght.woff2
+│    │    │    ├── Jost-VariableFont_wght.woff2
+│    │    │    ├── OpenSans-VariableFont_wdth,wgth.woff2
+│    │    │    └── ShareTech-Regular.woff2
+│    │    └── style.css
+│    ├── templates/
+│    │     └── index.html
+│    ├── app.py
+│    ├── requirements.txt  
+│    └── schema.py
 ├── Readme.md
 └── requirements.txt
 ```
